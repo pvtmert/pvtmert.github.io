@@ -1,0 +1,146 @@
+/* STYLE CSS
+	AUTHOR: MERT AKENGIN
+	* PLEASE GIVE CREDIT WHEN YOU TAKING CODE IF YOU ARE IN AN ORGANIZATION... */
+
+@import "onoff.css";
+@import url("http://raw.github.com/daneden/animate.css/master/animate.css");
+@import url("http://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css");
+
+* { transition:0.25s; line-height:1.33; cursor:default; }
+
+HTML
+{
+	background-color:transparent;
+	background-image:url('http://p1.pichost.me/i/33/1562414.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+	margin:0px;
+	position:absolute;
+	top:0; left:0;
+	bottom:0; right:0;
+	overflow:scroll-y;
+	z-index:1;
+}
+
+BODY
+{
+	position:absolute;
+	margin:0px;
+	top:5%;
+	left:10%;
+	right:10%;
+	overflow:scroll-y;
+	background-color:rgba(0,0,0,0.8);
+	color:white;
+	font-family:arial;
+	text-shadow:0 0 0.05em white;
+	padding:32px;
+	border-radius:20px;
+	text-indent:2em;
+	z-index:5;
+	box-shadow:0 0 1.5em black;
+}
+
+H1,H2,H3
+{
+	font-family:serif;
+	border-radius:5px;
+	padding:10px;
+	text-shadow:0 0 0.1em white;
+	xbox-shadow:
+		0 0 0.2em silver,
+		0 0 0.4em silver,
+		0 0 1.6em silver,
+		0 0 3.2em silver;
+	z-index:10;
+}
+H2 { font-style:italic; border-bottom:1px solid silver; }
+H2:HOVER { background:linear-gradient(to right,transparent,yellow,transparent); color:black; text-shadow:0 0 0.1em black; } 
+H3 { text-align:right; font-weight:lighter; border-top:1px solid silver; }
+H3:HOVER { background:linear-gradient(to right,transparent,rgba(250,22,22,0.7)); }
+
+P
+{
+	font-family:monospace;
+	font-weight:bold;
+	border-radius:15px;
+	border:2px solid silver;
+	padding:15px;
+	color:silver;
+	overflow:auto;
+	z-index:15;
+}
+P:HOVER
+{
+	xposition:fixed;
+	xtop:11; xbottom:6%;
+	xleft:10%; xright:10%;
+	overflow:scroll-y;
+	color:white;
+	background:linear-gradient(to right,transparent,black,black,black,black,black,transparent,transparent);
+	text-shadow:0 0 0.085em white;
+	xbox-shadow:0 0 0.4em white,
+		0 0 0.8em silver,
+		0 0 1.6em cyan;
+	font-weight:normal;
+	
+}
+
+A { color:lime; cursor:hand; }
+
+links
+{
+	text-size:16;
+	background:linear-gradient(to right,transparent,rgb(140,0,0),transparent);
+	white-space:pre-wrap;
+	display:block;
+}
+links A:HOVER { background:linear-gradient(to right,transparent,black,black,transparent); padding:3; zoom:1.1; border-radius:5; color:yellow; font-family:monospace; }
+
+
+sbox
+{
+	position:fixed;
+	display:block;
+	top:1%;
+	right:0%;
+	width:64px;
+	height:auto;
+	border-radius:20px;
+	border:1px solid gray;
+	opacity:0.85;
+	padding:16px;
+	text-align:center;
+	vertical-align:middle;
+	z-index:10;
+	text-indent:0px;
+	background-color:rgba(64,64,64,0.8);
+}
+sbox A IMG
+{
+	display:inline-block;
+	position:relative;
+	width:48px;
+	height:48px;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-radius:11px;
+	cursor:hand;
+}
+sbox A IMG:HOVER { background-color:white; }
+sbox:hover { opacity:1; border-color:white; }
+
+@keyframes fadein
+{
+	from { opactity:0; }
+	to { opacity:1; }
+}
+
+@keyframes slidein
+{
+	from { margin-left:105%; }
+	to { margin-left:0%; }
+}
+
