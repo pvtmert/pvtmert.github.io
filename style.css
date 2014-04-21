@@ -97,7 +97,15 @@ links
 	white-space:pre-wrap;
 	display:block;
 }
-links A:HOVER { background:linear-gradient(to right,transparent,black,black,transparent); padding:3; zoom:1.1; border-radius:5; color:yellow; font-family:monospace; }
+links A:HOVER
+{
+	background:linear-gradient(to right,transparent,black,black,transparent);
+	xpadding:3;
+	xzoom:1.1;
+	border-radius:5;
+	color:yellow;
+	xfont-family:monospace;
+}
 
 
 sbox
@@ -143,4 +151,3 @@ sbox:hover { opacity:1; border-color:white; }
 	from { margin-left:105%; }
 	to { margin-left:0%; }
 }
-
