@@ -63,8 +63,8 @@ H3:HOVER { background:linear-gradient(to right,transparent,rgba(250,22,22,0.7));
 
 P
 {
-	font-family:monospace;
-	font-weight:bold;
+	xfont-family:monospace;
+	xfont-weight:bold;
 	border-radius:15px;
 	border:2px solid silver;
 	padding:15px;
