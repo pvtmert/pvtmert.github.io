@@ -2,10 +2,8 @@
 	AUTHOR: MERT AKENGIN
 	* PLEASE GIVE CREDIT WHEN YOU TAKING CODE IF YOU ARE IN AN ORGANIZATION... */
 
-@import "onoff.css";
 @import url("http://raw.github.com/daneden/animate.css/master/animate.css");
 @import url("http://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css");
-
 * { transition:0.25s; line-height:1.33; cursor:default; }
 
 HTML
@@ -49,7 +47,7 @@ H1,H2,H3
 	border-radius:5px;
 	padding:10px;
 	text-shadow:0 0 0.1em white;
-	xbox-shadow:
+	_box-shadow:
 		0 0 0.2em silver,
 		0 0 0.4em silver,
 		0 0 1.6em silver,
@@ -63,8 +61,8 @@ H3:HOVER { background:linear-gradient(to right,transparent,rgba(250,22,22,0.7));
 
 P
 {
-	xfont-family:monospace;
-	xfont-weight:bold;
+	_font-family:monospace;
+	_font-weight:bold;
 	border-radius:15px;
 	border:2px solid silver;
 	padding:15px;
@@ -100,11 +98,11 @@ links
 links A:HOVER
 {
 	background:linear-gradient(to right,transparent,black,black,transparent);
-	xpadding:3;
+	_padding:3;
 	xzoom:1.1;
 	border-radius:5;
 	color:yellow;
-	xfont-family:monospace;
+	_font-family:monospace;
 }
 
 
@@ -140,14 +138,3 @@ sbox A IMG
 sbox A IMG:HOVER { background-color:white; }
 sbox:hover { opacity:1; border-color:white; }
 
-@keyframes fadein
-{
-	from { opactity:0; }
-	to { opacity:1; }
-}
-
-@keyframes slidein
-{
-	from { margin-left:105%; }
-	to { margin-left:0%; }
-}
