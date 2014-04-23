@@ -26,7 +26,7 @@ BODY
 {
 	position:absolute;
 	margin:0px;
-	top:5%;
+	top:20px;
 	left:10%;
 	right:10%;
 	overflow:scroll-y;
@@ -35,7 +35,7 @@ BODY
 	font-family:arial;
 	text-shadow:0 0 0.05em white;
 	padding:32px;
-	border-radius:20px;
+	border-radius:5px;
 	text-indent:2em;
 	z-index:5;
 	box-shadow:0 0 1.5em black;
@@ -57,14 +57,14 @@ H1,H2,H3
 H2 { font-style:italic; border-bottom:1px solid silver; }
 H2:HOVER { background:linear-gradient(to right,transparent,yellow,transparent); color:black; text-shadow:0 0 0.1em black; } 
 H3 { text-align:right; font-weight:lighter; border-top:1px solid silver; }
-H3:HOVER { background:linear-gradient(to right,transparent,rgba(250,22,22,0.7)); }
+H3 { background:linear-gradient(to right,transparent,rgba(250,22,22,0.7)); }
 
 P
 {
 	_font-family:monospace;
 	_font-weight:bold;
 	border-radius:15px;
-	border:2px solid silver;
+	border:0px solid silver;
 	padding:15px;
 	color:silver;
 	overflow:auto;
@@ -82,8 +82,7 @@ P:HOVER
 	xbox-shadow:0 0 0.4em white,
 		0 0 0.8em silver,
 		0 0 1.6em cyan;
-	font-weight:normal;
-	
+	font-weight:normal;	
 }
 
 A { color:lime; cursor:hand; }
@@ -104,7 +103,6 @@ links A:HOVER
 	color:yellow;
 	_font-family:monospace;
 }
-
 
 sbox
 {
