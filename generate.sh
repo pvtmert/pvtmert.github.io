@@ -4,6 +4,9 @@
 if [ -n "$1" ]; then
 	OLD_PWD="$PWD"
 	cd "$1"
+elif [ $(dirname $0) != '.' ]; then
+	OLD_PWD="$PWD"
+	cd $(dirname $0)
 fi
 
 OUTFILE=index.html
@@ -33,7 +36,7 @@ git add *
 git commit -m "${COMMENT}"
 git push
 
-if [ "$1" ]; then
+if [ "$OLD_PWD" ]; then
 	cd "$OLD_PWD"
 	unset OLD_PWD
 fi
