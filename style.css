@@ -4,7 +4,7 @@
 
 @import url("http://raw.github.com/daneden/animate.css/master/animate.css");
 @import url("http://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css");
-* { transition:0.25s; line-height:1.33; cursor:default; }
+* { transition:0.25s; line-height:1; cursor:default; }
 
 HTML
 {
@@ -33,7 +33,7 @@ BODY
 	background-color:rgba(0,0,0,0.8);
 	color:white;
 	font-family:arial;
-	text-shadow:0 0 0.05em white;
+	_text-shadow:0 0 0.05em white;
 	padding:32px;
 	border-radius:5px;
 	text-indent:2em;
@@ -46,7 +46,7 @@ H1,H2,H3
 	font-family:serif;
 	border-radius:5px;
 	padding:10px;
-	text-shadow:0 0 0.1em white;
+	text-shadow:0 0 0.08em white;
 	_box-shadow:
 		0 0 0.2em silver,
 		0 0 0.4em silver,
@@ -59,18 +59,26 @@ H2:HOVER { background:linear-gradient(to right,transparent,yellow,transparent); 
 H3 { text-align:right; font-weight:lighter; border-top:1px solid silver; }
 H3 { background:linear-gradient(to right,transparent,rgba(250,22,22,0.7)); }
 
-P
+date
+{
+	padding:5px;
+	color:yellow;
+	background:linear-gradient(to right,black,black,transparent);
+	border-radius:5px;
+}
+entry
 {
 	_font-family:monospace;
 	_font-weight:bold;
 	border-radius:15px;
 	border:0px solid silver;
-	padding:15px;
-	color:silver;
+	padding:10px;
+	color:white;
 	overflow:auto;
 	z-index:15;
 }
-P:HOVER
+entry P { white-space:pre-wrap; }
+_entry:HOVER
 {
 	xposition:fixed;
 	xtop:11; xbottom:6%;
@@ -86,6 +94,7 @@ P:HOVER
 }
 
 A { color:lime; cursor:hand; }
+A:HOVER { color:yellow; }
 
 links
 {
@@ -100,7 +109,6 @@ links A:HOVER
 	_padding:3;
 	xzoom:1.1;
 	border-radius:5;
-	color:yellow;
 	_font-family:monospace;
 }
 
