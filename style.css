@@ -32,7 +32,7 @@ BODY
 	overflow:scroll-y;
 	background-color:rgba(0,0,0,0.8);
 	color:white;
-	font-family:arial;
+	font-family:sans-serif;
 	_text-shadow:0 0 0.05em white;
 	padding:32px;
 	border-radius:5px;
@@ -144,3 +144,16 @@ sbox A IMG
 sbox A IMG:HOVER { background-color:white; }
 sbox:hover { opacity:1; border-color:white; }
 
+projects
+{
+	top:10%;
+	bottom:10%;
+	left:0;
+	position:fixed;
+	width:2%;
+	padding:15px;
+	border-radius:0 10 0 10;
+	background-color:black;
+	font-family:monospace;
+	color:white;
+}
