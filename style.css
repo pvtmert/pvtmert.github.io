@@ -108,7 +108,7 @@ links A:HOVER
 	background:linear-gradient(to right,transparent,black,black,transparent);
 	_padding:3;
 	xzoom:1.1;
-	border-radius:5;
+	border-radius:5px;
 	_font-family:monospace;
 }
 
@@ -148,12 +148,15 @@ projects
 {
 	top:10%;
 	bottom:10%;
-	left:0;
+	left:0px;
 	position:fixed;
 	width:2%;
-	padding:15px;
-	border-radius:0 10 0 10;
-	background-color:black;
+	padding:5px;
+	border-radius:0 10 10 0;
+	background-color:rgba(0,0,128,0.8);
 	font-family:monospace;
 	color:white;
+	font-size:1px;
 }
+projects:hover { font-size:14px; width:20%; } 
+projects:hover { width:1%; left:22%; }
