@@ -35,7 +35,7 @@ git push
 
 if [ "$1" ]; then
 	cd "$OLD_PWD"
-	unsed OLD_PWD
+	unset OLD_PWD
 fi
 
 exit 0
