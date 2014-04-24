@@ -158,5 +158,5 @@ projects
 	color:white;
 	font-size:1px;
 }
-projects:hover { font-size:14px; width:20%; } 
-projects:hover! > BODY { left:22%; }
+projects:click { font-size:14px; width:20%; } 
+BODY! > projects:hover { left:22%; }
