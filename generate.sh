@@ -22,7 +22,7 @@ if [ -z "${COMMENT}" ]; then
 	COMMENT="Added/Updated a blog post"
 fi
 
-${ENTRYSCR} "${TXTDIR}" "${ENTRIES}"
+"${ENTRYSCR}" "${TXTDIR}" "${ENTRIES}"
 {
 	cat "${HEADER}"
 	LN=$(grep -in "${SEARCHSTR}" "${BODY}" | cut -d: -f1)
