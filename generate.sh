@@ -14,7 +14,10 @@ ENTRIES=entry.html
 TXTDIR=yazi
 SEARCHSTR="IMPORT TXTDIR"
 ENTRYSCR="yazi/prep.sh"
-COMMENT="Added/Updated a blog post"
+
+if [ -z "${COMMENT}" ]; then
+	COMMENT="Added/Updated a blog post"
+fi
 
 ${ENTRYSCR} "${TXTDIR}" "${ENTRIES}"
 {
@@ -34,3 +37,5 @@ if [ "$1" ]; then
 	cd "$OLD_PWD"
 	unsed OLD_PWD
 fi
+
+exit 0
