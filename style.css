@@ -160,3 +160,4 @@ projects
 }
 projects:hover { font-size:14px; width:20%; } 
 BODY! > projects:hover { left:22%; }
+BODY < projects:hover { left:22%; }
