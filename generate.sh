@@ -14,9 +14,11 @@ HEADER=header.html
 FOOTER=footer.html
 BODY=body.html
 ENTRIES=entry.html
+PAGESMD=pbar.text
 TXTDIR=yazi
-SEARCHSTR="IMPORT TXTDIR"
-ENTRYSCR="yazi/prep.sh"
+SEARCHSTR=" IMPORT "
+ENTRYSCR="${TXTDIR}/prep.sh"
+PAGESCMD="$(which markdown) ${PAGESMD}"
 
 if [ -z "${COMMENT}" ]; then
 	COMMENT="Added/Updated a blog post"
@@ -28,9 +30,15 @@ fi
 	LN=$(grep -in "${SEARCHSTR}" "${BODY}" | cut -d: -f1)
 	head -$((LN-1)) "${BODY}"
 	cat "${ENTRIES}"
-	tail +$((LN-1)) "${BODY}"
-	cat "${FOOTER}"
+	tail +$((LN+1)) "${BODY}"
+	#cat "${FOOTER}" #disabled due adding these stuff:
+	LN=$(grep -in "${SEARCHSTR}" "${FOOTER}" | cut -d: -f1)
+	head -$((LN-1)) "${FOOTER}"
+	${PAGESCMD}
+	tail +$((LN+1)) "${FOOTER}"
 } > "${OUTFILE}"
+
+exit 0
 
 git add *
 git commit -m "${COMMENT}"
