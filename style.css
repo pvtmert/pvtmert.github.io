@@ -147,7 +147,8 @@ sbox:hover { opacity:1; border-color:white; }
 projects
 {
 	top:10%;
-	bottom:10%;
+	_bottom:10%;
+	max-height:85%;
 	left:0px;
 	position:fixed;
 	width:2%;
@@ -159,7 +160,7 @@ projects
 	font-size:0px;
 }
 projects P A:before { content:"-> "; }
-projects:hover { font-size:14px; min-width:16%; color:white; }
+projects:hover { font-size:14px; min-width:16%; color:white; min-height:66%; }
 projects A { color:transparent; }
 projects:hover A { color:white; }
 
