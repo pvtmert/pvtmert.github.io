@@ -12,7 +12,7 @@ CNT=25
 	do
 		DATE=$(date -u --date="@$(basename ${line} .text)" +"%A, %Y-%m-%d ¦ %H:%M")
 		echo "<entry title=\"${DATE}\"><a href=\"/${DIR}/${line}\"><date>${DATE} UTC</date> $(head -1 ${DIR}/${line})</a>"
-		markdown "${DIR}/${line}"
+		markdown "${DIR}/${line}" | tail +2 #tail is for title...
 		echo "</entry><hr>"
 	done
 	echo "<!-- ENTRIES END -->"

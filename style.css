@@ -54,7 +54,7 @@ H1,H2,H3
 		0 0 3.2em silver;
 	z-index:10;
 }
-H2 { font-style:italic; border-bottom:1px solid silver; }
+H2 { font-style:italic; border-bottom:1px solid silver; text-align:center; }
 H2:HOVER { background:linear-gradient(to right,transparent,yellow,transparent); color:black; text-shadow:0 0 0.1em black; } 
 H3 { text-align:right; font-weight:lighter; border-top:1px solid silver; }
 H3 { background:linear-gradient(to right,transparent,rgba(250,22,22,0.7)); }
