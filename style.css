@@ -161,7 +161,7 @@ projects
 projects P A:before { content:"-> "; }
 projects:hover { font-size:14px; min-width:16%; color:white; }
 projects A { color:transparent; }
-projects:hover A { color: white; }
+projects:hover A { color:white; }
 
 projects_text
 {
