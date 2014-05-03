@@ -9,12 +9,13 @@ elif [ $(dirname $0) != '.' ]; then
 	cd $(dirname $0)
 fi
 
+EXT=.md
 OUTFILE=index.html
 HEADER=header.html
 FOOTER=footer.html
 BODY=body.html
 ENTRIES=entry.html
-PAGESMD=pbar.text
+PAGESMD=pbar${EXT}
 TXTDIR=yazi
 SEARCHSTR=" IMPORT "
 ENTRYSCR="${TXTDIR}/prep.sh"
