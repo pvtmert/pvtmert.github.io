@@ -78,6 +78,7 @@ entry
 	z-index:15;
 }
 entry P { white-space:pre-wrap; }
+entry UL, entry OL { text-indent:0px; }
 _entry:HOVER
 {
 	xposition:fixed;
