@@ -1,5 +1,29 @@
 <hr />
 <!-- ENTRIES START -->
+<entry title="Tuesday, 2014-05-06 ¦ 17:59"><a href="/yazi/1399399158.md"><date>Tuesday, 2014-05-06 ¦ 17:59 UTC</date> bir insan ne kadar tembel olabilir...</a>
+
+<p>iste bu kadar tembel olabilir sayin seyirciler :) neyse sonunda bu yaziya basladim. oncelikle, yani gecen yazimdaki konulara deginmeden once slax 7.0.8'de man-pages'in (manual pages / kullanma klavuzlari) 2. section'inin eksik oldugunu farkettim. Slackware'in yapacagini dusunmedim ve direk man-pages slackware paketini indirdim - kurdum.
+kurmak derken, zaten kurulu gozukuyordu. ben de indirilmis arsivi tar xvf ile acip, dosyalari teker teker olmasi gereken yerlere yerlestirdim... Ehm, tabii ki 'teker teker' bunun icin sunu yazdim:
+    find . | tac | while read x; do test -e /$x || cp $x /$x; done
+find . kismi bu klasorun altindaki tum klasor ve dosyalari listeliyor
+tac kismi cat'in tersini yapiyor, yani son satir basta ilk satir sonda oluyor...
+while read ... kismi ise her bir satirdaki stringi aliyor, eger bu string e esdeger bir dosya varsa root altinda sonrakine geciyor, yoksa bu stringin konumundaki dosyayi root altina kopyaliyor. bu arada <code>root</code> un / demek oldugunu windowsculara hatirlatalim :)</p>
+
+<blockquote>
+  <p>sorun duzeldi mi: evet!</p>
+</blockquote>
+
+<p>yine yazmam gereken konulara gecmeden once birseyden soz etmek istiyorum: acik kaynak ve lisanslar. piyasada cok hizli gelisen bir acik-kaynak dunyasi oldugunu hepimiz goruyoruz. ayni zamanda da bircok firma yazilimlarini tamamen veya kismen acik kaynak hale getirip kullanici destegini almaya basliyorlar... ozellikle 'steamos' muhabbetinin baslamasi, linux kernelinin 3.10 surumune gelip raspberry pi gibi yeni ARM platformlarinda yukselmesi, android ve tabii ki google'in linux'u oldukca verimli sekilde kullaniyor olmasi hepsini gectim WinXP'nin destek suresinin sona ermesi insanlarin bu tip konulardan haberdar olmasini sagladi. Cevremde dikkat ettigim birkac hususu sizlerle paylasacagim. Bunlar 'bedava' olmasi gereken 'cekirdek' seyler. Fakat ne yazik ki bu seyler bedava olarak (en azindan tek kullanici icin?) sunulmuyor ve acik kaynak surumleri yetersiz cunku yeterince insan bilmiyor ve katki sunmuyor. (Adam bilmedigi seye nasil katki versin ki?)</p>
+
+<ul>
+<li>Standart ofis uygulamalari, 5 tane: Kelime islemci, sunum, tablolama, kapak-tasarim uygulamasi ve kucuk capli bir database.</li>
+<li>Metin duzenleyici, programlama dilleri ile: Not defteri gibi basit bir metin duzenleyici, notepad++ kadar super olsun demiyorum. sadece syntax-highlighting olsun, bunlar zor seyler degil. compiler olmasin, ide olmasin. sadece highlight, Asm, BASIC, Bash, Batch, C, C++ C#, CSS, D, F#, HTML, Java, JavaScript, Lisp, Python, Perl, Processing, XML ... eklesinler bunlari...</li>
+<li>madem acik kaynak yapmayacaksiniz her halti modul yapin: sevmedigimiz seyleri silebilelim...</li>
+</ul>
+
+<p>apple/ms'dekilere duyurulur... cekirdek bilesenler (office/iwork) hala parayla satiliyor...
+birseyler daha yazacaktim da unuttum simdi :) son olarak su yaziyi okumanizi tavsiye ederim: <a href="http://cristal.inria.fr/~weis/info/commandline.html">http://cristal.inria.fr/~weis/info/commandline.html</a></p>
+</entry><hr>
 <entry title="Saturday, 2014-05-03 ¦ 19:57"><a href="/yazi/1399147070.md"><date>Saturday, 2014-05-03 ¦ 19:57 UTC</date> parmagimizi da kestik, yazma hevesimizi de...</a>
 
 <p>yanlis duymadiniz... kucuk bir kaza sonucu bu oldu. cok buyuk problem degil ama giderek daha fazla 10-parmak yazdigim icin hepsi onemli... 'bu kesinlikle iz birakacak [klavyede]...'</p>
