@@ -183,7 +183,7 @@ projects_text:before{ content: "."; }
 projects_text:after{ content: "."; }
 projects:hover > projects_text { z-index:-1; opacity:0; }
 
-@media handheld, screen and (max-width: 995px) {
+@media handheld, screen and (max-device-width: 995px) {
 	HTML { background: linear-gradient(to bottom, yellow,red) no-repeat fixed; }	
 	links { font-size: 32px; }
 	projects { display: none; }
