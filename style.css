@@ -189,5 +189,5 @@ projects:hover > projects_text { z-index:-1; opacity:0; }
 	links { font-size: 32px; }
 	projects { display: none; }
 	sbox { display: none; }
-	BODY { left:1%; right:1%; overflow:scroll-y; font-size:80%; }
+	BODY { left:1%; right:1%; overflow:scroll-y; font-size:105%; }
 }
