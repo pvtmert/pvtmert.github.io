@@ -39,6 +39,7 @@ BODY
 	text-indent:2em;
 	z-index:5;
 	box-shadow:0 0 1.5em black;
+	font-weight:600;
 }
 
 H1,H2,H3
@@ -79,7 +80,7 @@ entry
 }
 entry P { white-space:pre-wrap; }
 entry UL, entry OL { text-indent:0px; }
-_entry:HOVER
+_entry:HOVER /* deprecated */
 {
 	xposition:fixed;
 	xtop:11; xbottom:6%;
@@ -99,11 +100,11 @@ A:HOVER { color:yellow; }
 
 links
 {
-	text-size:16;
 	background:linear-gradient(to right,transparent,rgb(140,0,0),transparent);
 	white-space:pre-wrap;
 	display:block;
 }
+/* links A { font-size:16; } */
 links A:HOVER
 {
 	background:linear-gradient(to right,transparent,black,black,transparent);
@@ -181,3 +182,8 @@ projects_text
 projects_text:before{ content: "."; }
 projects_text:after{ content: "."; }
 projects:hover > projects_text { z-index:-1; opacity:0; }
+
+@media screen, handheld and (max width: 900px) {
+	HTML { background: linear-gradient(to bottom, yellow,red) no-repeat fixed; }	
+	links { font-size: 30px; }
+}
