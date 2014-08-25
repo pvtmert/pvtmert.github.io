@@ -39,7 +39,7 @@ BODY
 	text-indent:2em;
 	z-index:5;
 	box-shadow:0 0 1.5em black;
-	font-weight:600;
+	font-weight:normal;
 }
 
 H1,H2,H3
