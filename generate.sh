@@ -25,7 +25,7 @@ if [ -z "${COMMENT}" ]; then
 	COMMENT="Added/Updated a blog post"
 fi
 
-"${ENTRYSCR}" "${TXTDIR}" "${ENTRIES}"
+"${SHELL}" "${ENTRYSCR}" "${TXTDIR}" "${ENTRIES}"
 {
 	cat "${HEADER}"
 	LN=$(grep -in "${SEARCHSTR}" "${BODY}" | cut -d: -f1)
@@ -35,7 +35,7 @@ fi
 	#cat "${FOOTER}" #disabled due adding these stuff:
 	LN=$(grep -in "${SEARCHSTR}" "${FOOTER}" | cut -d: -f1)
 	head -$((LN-1)) "${FOOTER}"
-	${PAGESCMD}
+	#{SHELL} ${PAGESCMD}
 	tail +$((LN+1)) "${FOOTER}"
 } > "${OUTFILE}"
 
