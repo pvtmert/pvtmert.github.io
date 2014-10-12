@@ -15,8 +15,7 @@ FMTSTR=$(uname -a | grep -qi "darwin" && echo "-r " || echo "--date=@")
 	echo "<!-- ENTRIES START -->"
 	ls -1vr "${DIR}" | grep -iv "$(basename $0)" | grep -i "\\${EXT}$" | head -${CNT} | while read line
 	do
-		echo "${DATE_EX} ${FMTSTR}"
-		DATE=$(${DATE_EX} -u ${FMTSTR}"$(basename ${line} ${EXT})" +"%A, %Y-%m-%d ¦ %H:%M")
+		DATE=$(${DATE_EX} -u ${FMTSTR}"$(basename ${line} ${EXT})" +"%A, %Y-%m-%d | %H:%M")
 		printf "<li> <a href=${line}>${line}</a>: %-35s: $(head -1 ${DIR}/${line}) </li>\n" "${DATE} UTC">> "${DEX}"
 		echo "<entry title=\"${DATE}\"><a href=\"/${DIR}/${line}\"><date>${DATE} UTC</date> $(head -1 ${DIR}/${line})</a>"
 		markdown "${DIR}/${line}" | tail +2 #tail is for title...
