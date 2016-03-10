@@ -2,8 +2,8 @@
 	AUTHOR: MERT AKENGIN
 	* PLEASE GIVE CREDIT WHEN YOU TAKING CODE IF YOU ARE IN AN ORGANIZATION... */
 
-@import url("http://raw.github.com/daneden/animate.css/master/animate.css");
-@import url("http://raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css");
+@import url("//raw.github.com/daneden/animate.css/master/animate.css");
+@import url("//raw.githubusercontent.com/IanLunn/Hover/master/css/hover.css");
 * { transition:0.25s; line-height:1.33; cursor:default; }
 
 HTML
