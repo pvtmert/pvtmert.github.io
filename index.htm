@@ -12,13 +12,13 @@
 				return r;
 			}
 			setInterval(function(e) {
-				var pos = [ rand(150,window.innerWidth-150), rand(150,window.innerHeight-250), ];
+				var pos = [ window.innerWidth/4+rand(0,window.innerWidth/2), window.innerHeight/4+rand(0,window.innerHeight/2), ];
 				elem = document.getElementsByTagName("h1")[0];
 				elem.style.fontFamily = "Special Elite, cursive";
 				elem.style.position = "fixed";
 				elem.style.transform = "translate("+pos[0]+"px,"+pos[1]+"px)";
 				elem.style.transition = "0.1s";
-			},222);
+			},333);
 		</script>
 	</body>
 </html>
