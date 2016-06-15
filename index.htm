@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title> ooops </title>
+		<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 	</head>
 	<body>
 		<h1> closed until further notice </h1>
@@ -13,6 +14,7 @@
 			setInterval(function(e) {
 				var pos = [ rand(150,window.innerWidth-150), rand(150,window.innerHeight-250), ];
 				elem = document.getElementsByTagName("h1")[0];
+				elem.style.fontFamily = "Special Elite, cursive";
 				elem.style.position = "fixed";
 				elem.style.transform = "translate("+pos[0]+"px,"+pos[1]+"px)";
 				elem.style.transition = "0.1s";
