@@ -12,14 +12,13 @@
 				return r;
 			}
 			setInterval(function(e) {
-				return;
 				var pos = [ window.innerWidth/4+rand(0,window.innerWidth/2), window.innerHeight/4+rand(0,window.innerHeight/2), ];
 				elem = document.getElementsByTagName("h1")[0];
 				elem.style.fontFamily = "Special Elite, cursive";
 				elem.style.fontSize = "64px";
 				elem.style.maxWidth = "333px";
 				elem.style.position = "fixed";
-				elem.style.transform = "translate("+pos[0]+"px,"+pos[1]+"px)";
+				//elem.style.transform = "translate("+pos[0]+"px,"+pos[1]+"px)";
 				elem.style.transition = "0.1s";
 			},333);
 		</script>
