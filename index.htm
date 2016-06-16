@@ -1,16 +1,31 @@
 <html>
 	<head>
 		<title> ooops </title>
-		<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+		<style>
+		html {
+			color:white;
+			background:black;
+			font-size:1.5em;
+			font-family:"Special Elite",cursive;
+			text-align:center;
+			padding:15%;
+		}
+		h2:before, h2:after { content:'-'; }
+		h1 { text-shadow:0 0 0.3em cyan; }
+		h2 { text-shadow:0 0 0.3em lime; }
+		</style>
 	</head>
 	<body>
 		<h1> closed until further notice </h1>
+		<h2> truth is out there </h2>
 		<script>
 			function rand(min,max) {
 				r = Math.random();
 				r = r * (max - min) + min;
 				return r;
 			}
+			/*
 			setInterval(function(e) {
 				var pos = [ window.innerWidth/4+rand(0,window.innerWidth/2), window.innerHeight/4+rand(0,window.innerHeight/2), ];
 				elem = document.getElementsByTagName("h1")[0];
@@ -21,6 +36,7 @@
 				//elem.style.transform = "translate("+pos[0]+"px,"+pos[1]+"px)";
 				elem.style.transition = "0.1s";
 			},333);
+			*/
 		</script>
 	</body>
 </html>
