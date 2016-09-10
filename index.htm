@@ -2,41 +2,116 @@
 	<head>
 		<title> ooops </title>
 		<link href="//fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Nova+Mono|VT323&subset=latin-ext" rel="stylesheet">
 		<style>
 		html {
 			color:white;
-			background:black;
-			font-size:1.5em;
-			font-family:"Special Elite",cursive;
-			text-align:center;
-			padding:15%;
+			font-size:1.2em;
+			font-family:"Anonymous Pro", monospace;
 		}
-		h2:before, h2:after { content:'-'; }
-		h1 { text-shadow:0 0 0.3em cyan; }
-		h2 { text-shadow:0 0 0.3em lime; }
+		body {
+			margin:auto;
+			max-width:80%;
+			margin-top:32px;
+		}
+		header { background:#222; }
+		.links { position:relative; font-size:0; white-space:pre-wrap; width:auto; height:auto; display:inline; float:right; transform:translateY(-210%); text-align:right; }
+		.links a { font-size:0.8rem; color:#444; }
+		h1, h4 { margin-left:5%; font-weight:lighter; color:#333; }
+		h1{ font-family:"VT323", monospace; font-size:2.5em; }
+		h4 { font-family:"Anonymous Pro", monospace; }
+		.section { background:#434343; padding:16px; border-radius:8px; margin:24px 0px; }
+		.section header {
+			font-family:"Nova Mono", monospace;
+			margin-top:-1.5em;
+			padding:4px 8px;
+			width:auto;
+			border-radius:4px;
+			float:left;
+			clear:left;
+		}
+		@media (max-width:960px) {
+			body { max-width:95%; }
+		}
+		@keyframes pulse {
+			from { opacity:1; }
+			to { opacity:0; }
+		}
+		#blink { animation: pulse 0.25s infinite alternate ease; }
+		hr { width:100%; }
 		</style>
 	</head>
 	<body>
-		<h1> closed until further notice </h1>
-		<h2> truth is out there </h2>
-		<script>
-			function rand(min,max) {
-				r = Math.random();
-				r = r * (max - min) + min;
-				return r;
-			}
-			/*
-			setInterval(function(e) {
-				var pos = [ window.innerWidth/4+rand(0,window.innerWidth/2), window.innerHeight/4+rand(0,window.innerHeight/2), ];
-				elem = document.getElementsByTagName("h1")[0];
-				elem.style.fontFamily = "Special Elite, cursive";
-				elem.style.fontSize = "64px";
-				elem.style.maxWidth = "333px";
-				elem.style.position = "fixed";
-				//elem.style.transform = "translate("+pos[0]+"px,"+pos[1]+"px)";
-				elem.style.transition = "0.1s";
-			},333);
-			*/
-		</script>
+		<h1>Mert Akengin <span id=blink>_</span></h1>
+		<h4>~ Software Engineering Student at BAU</h4>
+		<hr />
+		<div class=links >
+			<a href="//github.com/pvtmert">github.com/pvtmert</a>
+			<a href="//twitter.com/pvtmert">twitter.com/pvtmert</a>
+		</div>
+		<div class=section >
+			<header>/bin/bash -l</header>
+			<p>~ # whoami; # I mostly work on unix systems, fluent at Bash, Make, and C. Also completed small projects using PHP, Python, Javascript, Java, Processing and Arduino _</p>
+			<p>~/2013 # Built custom Linux boxes (mostly embedded). First one was for interactive touch screens and based on Slackware _</p>
+			<p>~/2015 # Later I built a info-screen system for my university and for a college from ground up. Including authentication and tablet apps for it _</p>
+		</div>
+		<div class=section >
+			<header>cat ~/.ssh/known_hosts</header>
+			<p>In years 2014 and 2015, I joined electric powered car teams then raced aganist other universities. Whilist building telemetry and communication protocols I also wrote cars' software for energy management and remote control.</p>
+			<p>Within Mechatronics club, I involved making first ever Drone Race between universities in country 2 times. From 2014 to 2016 I worked at R&D startup within university. Built comms and firmware for IoT wifi plug.</p>
+		</div>
+		<div class=section >
+			<header>tar cvf work.tar ~/projects</header>
+			<p>In March 2016 started internship in Lostar information security company. Besides using tools for pentesting such as nmap also involved in software projects which were including PHP, NodeJS, Python and Java. Ended at the end of July same year.</p>
+			<p>On late 2015 and early 2016, worked with 3D designing and printing startup Abbox within university. Build CCTV, did network routing and tunneling, STL formatted file viewer in Javascript and a site which uses it to share and view these files.</p>
+		</div>
+		<div class=section >
+			<header>less ./CONTRIBUTING</header>
+			<p>Open source is my standing point, what I believe, my point of view. So I contributed to these projects:</p>
+			<ul>
+			<li>Homebrew, package manager for OSX:
+				<ul>
+				<li>core repository</li>
+				<li>casks repository</li>
+				<li>patches repository</li>
+				<li>versions repository</li>
+				<li>maintaining repository for legacy software support for OSX 10.9 Mavericks.</li>
+				</ul>
+			<br />
+			<li>dvtm: dynamic virtual terminal manager, tiling wm:
+				<ul>
+				<li>- fix compiling problems on OSX 10.10 and above</li>
+				</ul>
+			</li>
+			<br />
+			<li>Slax, a Linux distro for thumb drives:
+				<ul>
+				<li>- packages contributions</li>
+				<li>- full installer script to install on a hard drive</li>
+				</ul>
+			</li>
+			<br />
+			<li>Pardus, Linux distro of Turkish Republic:
+				<ul>
+				<li>couple translations and package installation scripts fixed. Unfortunately project discontinued on late 2013.</li>
+				<li>Conversion of some Debian packages and compiling/integrating infra-red touch screen drivers.</li>
+				</ul>
+			<br />
+			<li>2bwm, 2B window manager for *nix systems:
+				<ul>
+				<li>contributed to ideas behind project (on IRC), submitted few lines of code to maintainer.</li>
+				</ul>
+			<br />
+			<li>In 2014 helped Istanbul Hackerspace to spread open source and free-software ideas, been part of 'Linux Days' which is hosted in my university. Helped around 50 people to install and run various Linux distributions, gave support for some time.</li>
+			<br />
+			<li>Submitted vulnerability bug report to Google's goo.gl URL shortening service. Althrough it was information level risk.</li>
+			<br />
+			<li>Built website for TEDx Bahcesehir University, for 2016 and 2017 events.</li>
+			<br />
+			<li>dwa012/html5-qrcode: fixed small bug related to submodules.</li>
+			<br />
+			<li>Built and ran system for 6 months in my high school using custom built Linux kernel and Slackware based user-space for Interactive screens, which were taking record of lectures then mailing questions and their solutions to students automatically.</li>
+			</ul>
+		</div>
 	</body>
 </html>
