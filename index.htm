@@ -1,6 +1,14 @@
 <html>
 	<head>
-		<title> ooops </title>
+		<meta charset="utf-8" />
+		<meta name='author' content='Mert Akengin' >
+		<meta name='description' content='about me, mert akengin, software engineering student at bahcesehir university' >
+		<meta name='keywords' content='mert, akengin, bahcesehir, university, software, engineering, student, personal, homepage, about, blabla'>
+		<meta name="viewport" content="initial-scale=0.8, maximum-scale=1.2, width=device-width, user-scalable=no" />
+		<meta name="theme-color" content="#434343">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<title>mert akengin - about</title>
 		<link href="//fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Nova+Mono|VT323&subset=latin-ext" rel="stylesheet">
 		<style>
@@ -20,7 +28,8 @@
 		h1, h4 { margin-left:5%; font-weight:lighter; color:#333; }
 		h1{ font-family:"VT323", monospace; font-size:2.7em; margin-bottom:0.2em; }
 		h4 { font-family:"Anonymous Pro", monospace; }
-		.section { background:#434343; padding:16px; border-radius:8px; margin:32px 0px; }
+		.section { background:#434343; padding:16px; border-radius:8px; margin:32px 0px; line-height:1.3em; }
+		.section a { color:inherit; }
 		.section header {
 			font-family:"Nova Mono", monospace;
 			margin-top:-1.5em;
@@ -43,7 +52,7 @@
 	</head>
 	<body>
 		<h1>Mert Akengin <span id=blink>_</span></h1>
-		<h4>~ Software Engineering Student at BAU</h4>
+		<h4><span id=caption >~ Software Engineering Student at BAU</span><span id=cursor >_</span></h4>
 		<hr />
 		<div class=links >
 			<a href="//github.com/pvtmert">github.com/pvtmert</a>
@@ -51,67 +60,128 @@
 		</div>
 		<div class=section >
 			<header>/bin/bash -l</header>
-			<p>~ # whoami; # I mostly work on unix systems, fluent at Bash, Make, and C. Also completed small projects using PHP, Python, Javascript, Java, Processing and Arduino _</p>
-			<p>~/2013 # Built custom Linux boxes (mostly embedded). First one was for interactive touch screens and based on Slackware _</p>
-			<p>~/2015 # Later I built a info-screen system for my university and for a college from ground up. Including authentication and tablet apps for it _</p>
+			<p>~ # whoami; # I mostly work on <b>UNIX</b> systems, fluent at <b>Bash</b>, <b>Make</b>, and <b>C</b>. Also completed small projects using <b>PHP</b>, <b>Python</b>, <b>Javascript</b>, <b>Java</b>, <b>Processing</b> and <b>Arduino</b> _</p>
+			<p>~/2013 # Built <b>custom Linux</b> boxes (mostly embedded). First one was for interactive touch screens and based on <b>Slackware</b> _</p>
+			<p>~/2015 # Later I built a info-screen <b>system for my university</b> and for a college from ground up. Including authentication and tablet <b>apps</b> for it _</p>
 		</div>
 		<div class=section >
 			<header>cat ~/.ssh/known_hosts</header>
-			<p>In years 2014 and 2015, I joined electric powered car teams then raced aganist other universities. Whilist building telemetry and communication protocols I also wrote cars' software for energy management and remote control.</p>
-			<p>Within Mechatronics club, I involved making first ever Drone Race between universities in country 2 times. From 2014 to 2016 I worked at R&D startup within university. Built comms and firmware for IoT wifi plug.</p>
+			<p>In years 2014 and 2015, I joined electric powered car teams then raced aganist other universities. Whilist building telemetry and communication protocols I also wrote cars' <b>software for energy management and remote control</b>.</p>
+			<p>Within Mechatronics club, I involved making first ever Drone Race between universities in country 2 times. From 2014 to 2016 I worked at R&D startup within university. Built comms and <b>firmware for IoT</b> wifi plug.</p>
 		</div>
 		<div class=section >
 			<header>tar cvf work.tar ~/projects</header>
-			<p>In March 2016 started internship in Lostar information security company. Besides using tools for pentesting such as nmap also involved in software projects which were including PHP, NodeJS, Python and Java. Ended at the end of July same year.</p>
-			<p>On late 2015 and early 2016, worked with 3D designing and printing startup Abbox within university. Build CCTV, did network routing and tunneling, STL formatted file viewer in Javascript and a site which uses it to share and view these files.</p>
+			<p>In March 2016 started <b>internship in Lostar information security</b> company. Besides using tools for pentesting such as <a href='//nmap.org'>nmap</a> also involved in software projects which were including <b>PHP</b>, <b>NodeJS</b>, <b>Python</b> and <b>Java</b>. Ended at the end of July same year.</p>
+			<p>On late 2015 and early 2016, worked with 3D designing and printing startup Abbox within university. <b>Build CCTV</b>, did <b>network routing and tunneling</b>, <u>STL formatted file viewer in Javascript</u> and a site which uses it to share and view these files.</p>
 		</div>
 		<div class=section >
 			<header>less ./CONTRIBUTING</header>
 			<p>Open source is my standing point, what I believe, my point of view. So I contributed to these projects:</p>
 			<ul>
-			<li>Homebrew, package manager for OSX:
+			<li><a href='//brew.sh'>Homebrew</a>, package manager for OSX:
 				<ul>
-				<li>core repository</li>
-				<li>casks repository</li>
-				<li>patches repository</li>
-				<li>versions repository</li>
-				<li>maintaining repository for legacy software support for OSX 10.9 Mavericks.</li>
+				<li><a href='//github.com/homebrew/homebrew-core'>core</a> repository</li>
+				<li><a href='//github.com/caskroom/homebrew-cask'>casks</a> repository</li>
+				<li><a href='//github.com/homebrew/formula-patches'>patches</a> repository</li>
+				<li><a href='//github.com/caskroom/homebrew-versions'>versions</a> repository</li>
+				<li>maintaining <a href='//github.com/pvtmert/homebrew-mavericks'>repository</a> to support legacy software for OSX 10.9 Mavericks.</li>
 				</ul>
 			<br />
-			<li>dvtm: dynamic virtual terminal manager, tiling wm:
+			<li><a href='//brain-dump.org/projects/dvtm'>dvtm</a>: dynamic virtual terminal manager, tiling wm:
 				<ul>
-				<li>- fix compiling problems on OSX 10.10 and above</li>
-				</ul>
-			</li>
-			<br />
-			<li>Slax, a Linux distro for thumb drives:
-				<ul>
-				<li>- packages contributions</li>
-				<li>- full installer script to install on a hard drive</li>
+				<li>- fix compiling problems on OSX 10.10 and above.</li>
 				</ul>
 			</li>
 			<br />
-			<li>Pardus, Linux distro of Turkish Republic:
+			<li><a href='//slax.org'>Slax</a>, a Linux distro for thumb drives:
+				<ul>
+				<li>- package contributions (<a href='//slax.org/modules.php?detail=slapt-get'>1</a>, <a href='//slax.org/modules.php?detail=2bwm'>2</a>, <a href='//slax.org/modules.php?detail=CMatrix'>3</a>)</li>
+				<li>- <a href='//old.slax.org/forum.php?action=view&parentID=84097'>full installer script</a> to install on a hard drive.</li>
+				</ul>
+			</li>
+			<br />
+			<li><a href='//pardus.org.tr'>Pardus</a>, Linux distro of Turkish Republic:
 				<ul>
 				<li>couple translations and package installation scripts fixed. Unfortunately project discontinued on late 2013.</li>
 				<li>Conversion of some Debian packages and compiling/integrating infra-red touch screen drivers.</li>
 				</ul>
 			<br />
-			<li>2bwm, 2B window manager for *nix systems:
+			<li><a href='//github.com/venam/2bwm'>2bwm</a>, 2B window manager for *nix systems:
 				<ul>
-				<li>contributed to ideas behind project (on IRC), submitted few lines of code to maintainer.</li>
+				<li>contributed to ideas behind project (on <a href='//nixers.net'>IRC</a>), submitted few lines of code to maintainer.</li>
 				</ul>
 			<br />
-			<li>In 2014 helped Istanbul Hackerspace to spread open source and free-software ideas, been part of 'Linux Days' which is hosted in my university. Helped around 50 people to install and run various Linux distributions, gave support for some time.</li>
+			<li>In 2014 helped <a href='//istanbulhs.org'>Istanbul Hackerspace</a> to spread open source and free-software ideas, been part of 'Linux Days' which is hosted in my university. Helped around 50 people to install and run various Linux distributions, gave support for some time.</li>
 			<br />
-			<li>Submitted vulnerability bug report to Google's goo.gl URL shortening service. Althrough it was information level risk.</li>
+			<li>Submitted <b>vulnerability bug</b> report to <b>Google</b>'s goo.gl URL shortening service. Althrough it was information level risk.</li>
 			<br />
-			<li>Built website for TEDx Bahcesehir University, for 2016 and 2017 events.</li>
+			<li>Built website for <a href='//tedxbahcesehir.com'>TEDx Bahcesehir University</a>, for 2016 and 2017 events.</li>
 			<br />
-			<li>dwa012/html5-qrcode: fixed small bug related to submodules.</li>
+			<li><a href='//github.com/dwa012/html5-qrcode'>dwa012/html5-qrcode</a>, js qrcode scanner library: fixed small bug related to submodules.</li>
 			<br />
 			<li>Built and ran system for 6 months in my high school using custom built Linux kernel and Slackware based user-space for Interactive screens, which were taking record of lectures then mailing questions and their solutions to students automatically.</li>
+			<br />
+			<li>When I was at high school, I joined a team who modded Call of Duty Modern Warfare 2, and contributed to <b>alterIWnet</b> and <b>FourDeltaOne</b> projects in spare time. (testing and bugfixing etc.)</li>
 			</ul>
 		</div>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" >
+var captionLength = 0;
+var caption = '';
+
+function type() {
+	lock = true;
+    captionEl.html(caption.substr(0, captionLength++));
+    if(captionLength < caption.length+1) {
+        setTimeout('type()', 50);
+    } else {
+        captionLength = 0;
+        caption = '';
+        lock = false;
+    }
+}
+
+function testErasingEffect() {
+    caption = captionEl.html();
+    captionLength = caption.length;
+    if (captionLength>0) {
+        erase();
+    } else {
+        $('#caption').html("You didn't write anything to erase, but that's ok!");
+        setTimeout('testErasingEffect()', 1000);
+    }
+}
+
+function erase() {
+	lock = true;
+    captionEl.html(caption.substr(0, captionLength--));
+    if(captionLength >= 0) {
+        setTimeout('erase()', 50);
+    } else {
+        captionLength = 0;
+        caption = '';
+        lock = false;
+    }
+}
+
+function cursorAnimation() {
+    $('#cursor').animate({
+        opacity: 0
+    }, 'fast', 'swing').animate({
+        opacity: 1
+    }, 'fast', 'swing');
+}
+
+var lock = false;
+var timer = false;
+window.onload = function(e) {
+	captionEl = $('#caption');
+	setInterval('cursorAnimation()', 600);
+	caption = document.getElementById("caption").innerHTML;
+	document.getElementById("caption").innerHTML = "";
+	setTimeout("type();",123);
+	return;
+};
+		</script>
 	</body>
 </html>
