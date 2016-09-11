@@ -130,7 +130,7 @@
 			twitter: <a href='//twitter.com/pvtmert'>@pvtmert</a>
 			or
 			github: <a href='//github.com/pvtmert'>/pvtmert</a>
-			or mail me: mert [at] {this domain}
+			or mail me: 
 		</div>
 		<hr />
 		<br />
@@ -186,6 +186,7 @@ var lock = false;
 var timer = false;
 window.onload = function(e) {
 	document.getElementsByClassName("links")[0].innerHTML = "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n" + document.getElementsByClassName("links")[0].innerHTML;
+	document.getElementsByClassName("links")[1].innerHTML += "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n";
 	captionEl = $('#caption');
 	setInterval('cursorAnimation()', 600);
 	caption = document.getElementById("caption").innerHTML;
