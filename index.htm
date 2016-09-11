@@ -185,7 +185,7 @@ function cursorAnimation() {
 var lock = false;
 var timer = false;
 window.onload = function(e) {
-	document.getElementsByClassName("links")[0].innerHTML = "mert@" + window.location.hostname.split(".").reverse().slice(0,2).join(".") + "\n" + document.getElementsByClassName("links")[0].innerHTML;
+	document.getElementsByClassName("links")[0].innerHTML = "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).join("[dot]") + "</a>\n" + document.getElementsByClassName("links")[0].innerHTML;
 	captionEl = $('#caption');
 	setInterval('cursorAnimation()', 600);
 	caption = document.getElementById("caption").innerHTML;
