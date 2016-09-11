@@ -24,7 +24,7 @@
 		}
 		header { background:#222; }
 		.links { color:#444; font-size:0.8rem; text-align:center; }
-		body .links:nth-child(1) { position:relative; font-size:0; white-space:pre-wrap; width:auto; height:auto; display:inline-block; float:right; transform:translateY(50%); text-align:right; }
+		body .links:nth-child(1) { position:relative; font-size:0; white-space:pre-wrap; width:auto; height:auto; display:inline-block; float:right; transform:translateY(10%); text-align:right; }
 		h1, h4 { margin-left:5%; font-weight:lighter; color:#333; }
 		h1{ font-family:"VT323", monospace; font-size:2.7em; margin-bottom:0.2em; }
 		h4 { font-family:"Anonymous Pro", monospace; }
@@ -185,6 +185,7 @@ function cursorAnimation() {
 var lock = false;
 var timer = false;
 window.onload = function(e) {
+	document.getElementsByClassName("links")[0].innerHTML = "mert@" + window.location.hostname.split(".").reverse().slice(0,2).join(".") + "\n" + document.getElementsByClassName("links")[0].innerHTML;
 	captionEl = $('#caption');
 	setInterval('cursorAnimation()', 600);
 	caption = document.getElementById("caption").innerHTML;
