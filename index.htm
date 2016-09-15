@@ -57,8 +57,6 @@
 			margin:32px 0px;
 			line-height:1.3em;
 		}
-		a { color:inherit; }
-		.links a { font-size:0.8rem; }
 		.section header {
 			font-family:"Nova Mono", monospace;
 			margin-top:-1.5em;
@@ -68,6 +66,10 @@
 			float:left;
 			clear:left;
 		}
+		a { color:inherit; }
+		.links a { font-size:0.8rem; }
+		hr { width:100%; }
+		#blink { animation: pulse 0.25s infinite alternate ease; }
 		@media (max-width:960px) {
 			body { max-width:95%; }
 		}
@@ -75,8 +77,12 @@
 			from { opacity:1; }
 			to { opacity:0; }
 		}
-		#blink { animation: pulse 0.25s infinite alternate ease; }
-		hr { width:100%; }
+		@media print {
+			html { font-size:0.8em; color:#434343; }
+			.section { margin:0; }
+			.section header { display:none; }
+			.cursor, #blink { display:none; }
+		}
 		</style>
 	</head>
 	<body>
