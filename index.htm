@@ -186,17 +186,6 @@ function type() {
     }
 }
 
-function testErasingEffect() {
-    caption = captionEl.html();
-    captionLength = caption.length;
-    if (captionLength>0) {
-        erase();
-    } else {
-        $('#caption').html("You didn't write anything to erase, but that's ok!");
-        setTimeout('testErasingEffect()', 1000);
-    }
-}
-
 function erase() {
 	lock = true;
     captionEl.html(caption.substr(0, captionLength--));
