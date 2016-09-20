@@ -204,7 +204,7 @@ window.onload = function(e) {
 	document.getElementsByClassName("links")[1].innerHTML += "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n";
 	captionEl = document.getElementById("caption");
 	caption = captionEl.innerHTML;
-	document.getElementById("caption").innerHTML = "";
+	captionEl.innerHTML = "";
 	setTimeout("type();",123);
 	return;
 };
