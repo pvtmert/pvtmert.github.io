@@ -69,7 +69,7 @@
 		a { color:inherit; }
 		.links a { font-size:0.8rem; }
 		hr { width:100%; }
-		#blink { animation: pulse 0.25s infinite alternate ease; }
+		#blink { animation: pulse 0.2s infinite alternate ease-in-out; }
 		@media (max-width:960px) {
 			body { max-width:95%; }
 		}
@@ -91,7 +91,7 @@
 			<a href="//twitter.com/pvtmert">twitter.com/pvtmert</a>
 		</div>
 		<h1>Mert Akengin <span id=blink>_</span></h1>
-		<h4><span id=caption >~ Software Engineering Student at BAU</span><span id=cursor >_</span></h4>
+		<h4><span id=caption >~ Software Engineering Student at BAU</span><span id=blink >_</span></h4>
 		<hr />
 		<div class=section >
 			<header>/bin/bash -l</header>
@@ -169,14 +169,13 @@
 		</div>
 		<hr />
 		<br />
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript" >
 var captionLength = 0;
 var caption = '';
 
 function type() {
 	lock = true;
-    captionEl.html(caption.substr(0, captionLength++));
+    captionEl.innerHTML = (caption.substr(0, captionLength++));
     if(captionLength < caption.length+1) {
         setTimeout('type()', 50);
     } else {
@@ -198,22 +197,13 @@ function erase() {
     }
 }
 
-function cursorAnimation() {
-    $('#cursor').animate({
-        opacity: 0
-    }, 'fast', 'swing').animate({
-        opacity: 1
-    }, 'fast', 'swing');
-}
-
 var lock = false;
 var timer = false;
 window.onload = function(e) {
 	document.getElementsByClassName("links")[0].innerHTML = "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n" + document.getElementsByClassName("links")[0].innerHTML;
 	document.getElementsByClassName("links")[1].innerHTML += "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n";
-	captionEl = $('#caption');
-	setInterval('cursorAnimation()', 600);
-	caption = document.getElementById("caption").innerHTML;
+	captionEl = document.getElementById("caption");
+	caption = captionEl.innerHTML;
 	document.getElementById("caption").innerHTML = "";
 	setTimeout("type();",123);
 	return;
