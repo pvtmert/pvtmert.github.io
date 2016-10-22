@@ -1,5 +1,6 @@
 <html>
 	<head>
+<meta name="google-site-verification" content="XMWlmmcJIzZrOR3kMFHo_bqdiJJbgj6MSnF4J7cs-gs" />
 		<meta charset="utf-8" />
 		<meta name='author' content='Mert Akengin' >
 		<meta name='description' content='about me, mert akengin, software engineering student at bahcesehir university' >
@@ -187,7 +188,7 @@ function type() {
 
 function erase() {
 	lock = true;
-    captionEl.html(caption.substr(0, captionLength--));
+    captionEl.innerHTML = caption.substr(0, captionLength--);
     if(captionLength >= 0) {
         setTimeout('erase()', 50);
     } else {
