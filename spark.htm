@@ -372,6 +372,16 @@ window.onload = function(e) {
 	}
 	return;
 };
+
+window.addEventListener("keyup", function(e) {
+	if (e.keyCode == 27) {
+		imgs = document.getElementsByTagName("img");
+		for(var i=0;i<imgs.length;i++) {
+			imgs[i].removeAttribute("fs");
+		}
+	}
+	return;
+});
 		</script>
 	</body>
 </html>
