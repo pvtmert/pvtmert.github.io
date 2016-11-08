@@ -374,12 +374,36 @@ window.onload = function(e) {
 };
 
 window.addEventListener("keyup", function(e) {
-	if (e.keyCode == 27) {
-		imgs = document.getElementsByTagName("img");
+	let imgs = document.getElementsByTagName("img");
+	if(e.keyCode === 27) {
 		for(var i=0;i<imgs.length;i++) {
 			imgs[i].removeAttribute("fs");
 		}
+		return;
 	}
+	if(e.keyCode === 37) {
+		for(var i=1;i<imgs.length;i++) {
+			if(imgs[i].getAttribute("fs") !== null) {
+				imgs[i].removeAttribute("fs");
+				imgs[i-1].setAttribute("fs", true);
+				break;
+			}
+			continue;
+		}
+		return;
+	}
+	if(e.keyCode === 39) {
+		for(var i=0;i<imgs.length-1;i++) {
+			if(imgs[i].getAttribute("fs") !== null) {
+				imgs[i].removeAttribute("fs");
+				imgs[i+1].setAttribute("fs", true);
+				break;
+			}
+			continue;
+		}
+		return;
+	}
+	console.log(e);
 	return;
 });
 		</script>
