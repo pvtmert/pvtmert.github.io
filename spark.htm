@@ -382,10 +382,10 @@ window.addEventListener("keyup", function(e) {
 		return;
 	}
 	if(e.keyCode === 37) {
-		for(var i=1;i<imgs.length;i++) {
+		for(var i=0;i<imgs.length;i++) {
 			if(imgs[i].getAttribute("fs") !== null) {
 				imgs[i].removeAttribute("fs");
-				imgs[i-1].setAttribute("fs", true);
+				imgs[(i-1+imgs.length)%imgs.length].setAttribute("fs", true);
 				break;
 			}
 			continue;
@@ -393,10 +393,10 @@ window.addEventListener("keyup", function(e) {
 		return;
 	}
 	if(e.keyCode === 39) {
-		for(var i=0;i<imgs.length-1;i++) {
+		for(var i=0;i<imgs.length;i++) {
 			if(imgs[i].getAttribute("fs") !== null) {
 				imgs[i].removeAttribute("fs");
-				imgs[i+1].setAttribute("fs", true);
+				imgs[(i+1)%imgs.length].setAttribute("fs", true);
 				break;
 			}
 			continue;
