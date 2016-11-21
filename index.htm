@@ -17,11 +17,21 @@
 			color:white;
 			font-size:1.2em;
 			font-family:"Anonymous Pro", monospace;
+			background-image:url('//source.unsplash.com/user/pvtmert/likes');
+			background-size:cover;
+			background-position:center center;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
 		}
 		body {
 			margin:auto;
 			max-width:80%;
 			margin-top:32px;
+			margin-bottom:32px;
+			background-color:rgba(255,255,255,0.8);
+			-webkit-backdrop-filter:blur(8px);
+			border-radius:4px;
+			padding:3%;
 		}
 		header { background:#222; }
 		.links {
@@ -84,6 +94,10 @@
 			.section header { display:none; }
 			.cursor, #blink { display:none; }
 		}
+		@supports (-webkit-backdrop-filter: none) {
+			body { background-color:rgba(255,255,255,0.67); }
+			.links { color: #222; }
+		}
 		</style>
 	</head>
 	<body>
@@ -91,7 +105,7 @@
 			<a href="//github.com/pvtmert">github.com/pvtmert</a>
 			<a href="//twitter.com/pvtmert">twitter.com/pvtmert</a>
 		</div>
-		<h1 onclick="window.location = './spark.htm';">Mert Akengin <span id=blink>_</span></h1>
+		<h1 onclick="window.location = './spark.htm';">Mert Akengin<span id=blink>_</span></h1>
 		<h4><span id=caption >~ Software Engineering Student at BAU</span><span id=blink >_</span></h4>
 		<hr />
 		<div class=section >
