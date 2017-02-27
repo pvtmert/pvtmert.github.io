@@ -84,22 +84,6 @@
 		.links a { font-size:0.8rem; }
 		hr { width:100%; }
 		#blink { animation: pulse 0.2s infinite alternate ease-in-out; }
-		@media (max-width:960px) {
-			body { max-width:95%; margin:24px auto; }
-		}
-		@media (min-width:960px) {
-			html { 	background-image:url('//source.unsplash.com/user/pvtmert/likes'); }
-		}
-		@keyframes pulse {
-			from { opacity:1; }
-			to { opacity:0; }
-		}
-		@media print {
-			html { font-size:0.8em; color:#434343; }
-			.section { margin:0; }
-			.section header { display:none; }
-			.cursor, #blink { display:none; }
-		}
 		.credit {
 			float:right;
 			margin:8px;
@@ -113,6 +97,24 @@
 			-webkit-backdrop-filter:blur(8px);
 			border-radius:4px;
 			font-weight:600;
+		}
+		@media (max-width:960px) {
+			body { max-width:95%; margin:24px auto; }
+			.credit { display:none; }
+		}
+		@media (min-width:960px) {
+			html { 	background-image:url('//source.unsplash.com/user/pvtmert/likes'); }
+		}
+		@keyframes pulse {
+			from { opacity:1; }
+			to { opacity:0; }
+		}
+		@media print {
+			html { font-size:0.8em; color:#434343; }
+			.section { margin:0; }
+			.section header { display:none; }
+			.cursor, #blink { display:none; }
+			.credit { display:none; }
 		}
 		@supports (-webkit-backdrop-filter: none) {
 			body { background-color:rgba(255,255,255,0.67); }
@@ -133,7 +135,7 @@
 			<header>/bin/bash -l</header>
 			<p>~ # whoami; # I mostly work on <b>UNIX</b> systems, fluent at <b>Bash</b>, <b>Make</b>, and <b>C</b>. Also completed small projects using <b>PHP</b>, <b>Python</b>, <b>Javascript</b>, <b>Java</b>, <b>Processing</b> and <b>Arduino</b> _</p>
 			<p>~/2013 # Built <b>custom Linux</b> boxes (mostly embedded). First one was for interactive touch screens and based on <b>Slackware</b> _</p>
-			<p>~/2015 # Later I built a info-screen <b>system for my university</b> and for a college from ground up. Including authentication and tablet <b>apps</b> for it _</p>
+			<p>~/2015 # Later I built a info-screen <b>system for university which I'm studying</b> and for a college from ground up. Including authentication and tablet <b>apps</b> for it _</p>
 		</div>
 		<div class=section >
 			<header>cat ~/.ssh/known_hosts</header>
