@@ -100,9 +100,24 @@
 			.section header { display:none; }
 			.cursor, #blink { display:none; }
 		}
+		.credit {
+			float:right;
+			margin:8px;
+			margin-top:100vh;
+			width:auto;
+			color:#eee;
+			padding:8px;
+			text-align:center;
+			_border:1px solid #333;
+			background-color:rgba(50,50,50,0.8);
+			-webkit-backdrop-filter:blur(8px);
+			border-radius:4px;
+			font-weight:600;
+		}
 		@supports (-webkit-backdrop-filter: none) {
 			body { background-color:rgba(255,255,255,0.67); }
 			.links { color: #222; }
+			.credit { background-color:rgba(50,50,50,0.67); }
 		}
 		</style>
 	</head>
@@ -190,6 +205,7 @@
 		</div>
 		<hr />
 		<br />
+		<div class="credit">Photo: <a href="//unsplash.com">UNSPLASH</a></div>
 		<script type="text/javascript" >
 var captionLength = 0;
 var caption = '';
