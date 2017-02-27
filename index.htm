@@ -207,7 +207,7 @@
 		</div>
 		<hr />
 		<br />
-		<div class="credit">Photo: <a href="//unsplash.com">UNSPLASH</a></div>
+		<div class="credit">Photo: <a href="//unsplash.com/@pvtmert/likes">UNSPLASH</a></div>
 		<script type="text/javascript" >
 var captionLength = 0;
 var caption = '';
@@ -245,6 +245,10 @@ window.onload = function(e) {
 	caption = captionEl.innerHTML;
 	captionEl.innerHTML = "";
 	setTimeout("type();",123);
+	document.addEventListener('copy', function(e) {
+		console.log(this, e);
+		return;
+	});
 	return;
 };
 		</script>
