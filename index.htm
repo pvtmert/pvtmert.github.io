@@ -94,7 +94,7 @@
 			text-align:center;
 			_border:1px solid #333;
 			background-color:rgba(50,50,50,0.8);
-			-webkit-backdrop-filter:blur(8px);
+			-webkit-backdrop-filter:brightness(3) blur(8px);
 			border-radius:4px;
 			font-weight:600;
 		}
@@ -103,7 +103,7 @@
 			.credit { display:none; }
 		}
 		@media (min-width:960px) {
-			html { 	background-image:url('//source.unsplash.com/user/pvtmert/likes'); }
+			html { 	background-image:url("//source.unsplash.com/user/pvtmert/likes"); }
 		}
 		@keyframes pulse {
 			from { opacity:1; }
@@ -240,7 +240,7 @@ var lock = false;
 var timer = false;
 window.onload = function(e) {
 	document.getElementsByClassName("links")[0].innerHTML = "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n" + document.getElementsByClassName("links")[0].innerHTML;
-	document.getElementsByClassName("links")[1].innerHTML += "<a href='mailto:mert@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n";
+//	document.getElementsByClassName("links")[1].innerHTML += "<a href='mailto:mert" + "@" + window.location.hostname.split(".").reverse().slice(0,2).reverse().join(".") + "'>mert[at]"+window.location.hostname.split(".").reverse().slice(0,2).reverse().join("[dot]") + "</a>\n";
 	captionEl = document.getElementById("caption");
 	caption = captionEl.innerHTML;
 	captionEl.innerHTML = "";
