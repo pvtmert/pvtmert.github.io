@@ -52,14 +52,14 @@
 			margin-bottom:0.2em;
 		}
 		h4 { font-family:"Anonymous Pro", monospace; }
-		.section {
+		section {
 			background:#434343;
 			padding:16px;
 			border-radius:8px;
 			margin:32px 0px;
 			line-height:1.3em;
 		}
-		.section header {
+		section header {
 			font-family:"Nova Mono", monospace;
 			margin-top:-1.5em;
 			padding:4px 8px;
@@ -93,8 +93,8 @@
 			border-radius:4px;
 			_transition: 0.3s;
 		}
-		img[fs=true] {
-			z-index:5;
+		img[fs] {
+			z-index:99;
 			display:block;
 			position:fixed;
 			margin:auto;
@@ -106,13 +106,45 @@
 			min-width:0;
 			max-height:100vh;
 			min-height:0;
-			background-color:rgba(0,0,0,0.5);
 			border-radius:0;
-			box-shadow:0 0 0 99em black;
+			box-shadow:0 0 0 99em rgba(0, 0, 0, 0.9);
 		}
 		_img:hover { z-index:5; transform:scale(1.6); }
-		img[class*=hint--]:hover:before,
-		img[class*=hint--]:hover:after { z-index:99; }
+		[class*=hint--]:before {
+			border: none;
+		}
+		[class*=hint--]:after {
+			top: auto;
+			width: fit-content;
+			width: -webkit-fit-content;
+			max-width: 90%;
+			white-space: normal;
+			text-shadow: none;
+			background: #ddd;
+			font-size: 14px;
+			color: #222;
+		}
+		@supports (-webkit-backdrop-filter: none) {
+			[class*=hint--]:after {
+				backdrop-filter: blur(8px);
+				-webkit-backdrop-filter: blur(8px);
+				background: rgba(255, 255, 255, 0.67);
+			}
+		}
+		@supports (filter: url()) {
+			.blur {
+				filter: url(#blur-filter);
+				pointer-events: none;
+			}
+			img[fs] {
+				box-shadow:0 0 0 99em rgba(0, 0, 0, 0.9);
+				pointer-events: auto;
+			}
+		}
+		[class*=hint--hidden]:after,
+		[class*=hint--hidden]:before {
+			display: none;
+		}
 		</style>
 	</head>
 	<body>
@@ -123,202 +155,137 @@
 		<h1 onclick="window.location = './';">Mert Akengin <span id=blink>_</span></h1>
 		<h4><span id=caption >~ Software Engineering Student at BAU</span><span id=blink >_</span></h4>
 		<hr />
-		<div class=section style="text-align:center;">
-			<img
-				src="//i.imgur.com/5jUDM4C.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="test"
-			/>
-			<img
-				src="//i.imgur.com/Luz1rEe.png"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/sxLcjDO.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/zzqiM6R.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/MaYwc04.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/fTrsTIQ.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/uYQ630i.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/fGoEcrP.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/bQpNyJN.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/btMxDl8.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/9OGH6Te.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/eVb7EHO.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/ub1nAvk.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/b9xd7qj.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/xFe04ta.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/FqI9td5.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/X0aDvCu.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/rbUp9mJ.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/DG3yPd2.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img
-				src="//i.imgur.com/5l4OSjt.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/1uz8qSz.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/OdmvJGS.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/HX6xaVa.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/68A4Rob.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/XV0HQaG.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/Bhy8oc7.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/yi00Boe.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/Mv2SUQl.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/gMd2Z8O.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/W2cYv6f.png"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/Wb4nrwU.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/ORk7YMm.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/lAN93B2.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/sVESyzx.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/EiDvnxT.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/Ujm6eip.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/5aCJFN5.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/d8R15fL.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/arGAX6a.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//i.imgur.com/2Ub8mdu.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//cdn.discordapp.com/attachments/220182253651623936/245635158512762882/VID-20131115-00000.MP4_snapshot_00.03_2014.03.26_23.06.01.jpg"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//cdn.discordapp.com/attachments/220182253651623936/245635379992985600/DSC_1273.JPG"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-			<img src="//cdn.discordapp.com/attachments/220182253651623936/245635446216982538/DSC_1275.JPG"
-				class="hint--bottom hint--rounded hint--bounce"
-				aria-label="t"
-			/>
-		</div>
+		<section style="text-align:center;">
+			<span aria-label="we used cubieboard as digital signage host. erkin sahin designed and printed case with his home-made 3d printer"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/5jUDM4C.jpg" /></span>
+			<span aria-label="in 2014 we were at intel hackathon at wyndham graham, levent/istanbul."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/sxLcjDO.jpg" /></span>
+			<span aria-label="i also was referee at first two quadcopter drone race in bau. i dont remember who put wood thing on my right, but it was neat idea!"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/zzqiM6R.jpg" /></span>
+			<span  aria-label="at the first drone race, before we hang the net."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/MaYwc04.jpg" /></span>
+			<span aria-label="different angle of referee table of the bau quadcopter race"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/fTrsTIQ.jpg" /></span>
+			<span aria-label="the start and finish place of quadcopters."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/uYQ630i.jpg" /></span>
+			<span aria-label="we were jury at the 3rd intel hackathon which took place in bau robotic days. i have had nice time while helping people run edison and providing simple http broker api which i wrote day earlier."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/fGoEcrP.jpg" /></span>
+			<span aria-label="bau president senay yalcin were at our labrotary to listen what we do."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/bQpNyJN.jpg" /></span>
+			<span aria-label="team photo when bau president senay yalcin was at our labrotary, berke kocar was missing (probably he took the photo)"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/btMxDl8.jpg" /></span>
+			<span aria-label="erkin sahin explains how he made a 3d printer to do rapid prototyping at the labrotary to bau president senay yalcin."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/9OGH6Te.jpg" /></span>
+			<span aria-label="aydin yasar explains sales strategies to bau president senay yalcin"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/eVb7EHO.jpg" /></span>
+			<span aria-label="our first installation of digital signage project getting ready to took off"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/ub1nAvk.jpg" /></span>
+			<span aria-label="erkin sahin completing cubieboard's connections of digital signage project"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/b9xd7qj.jpg" /></span>
+			<span aria-label="our smaller digital signage app running as progressive web app with offline caching capabilities plus twitter feed at the bottom shows course schedule of A104 of bau's main campus. viewers also was able to see lecture information such as lecturer and other dates as well when demanded on touchscreen..."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/xFe04ta.jpg" /></span>
+			<span aria-label="difference between old and new, digital signage project that took us off first time."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/FqI9td5.jpg" /></span>
+			<span aria-label="i was messing with erkin sahin's 3d printer and we found some nice dock for smartphones. testing it out with my 2014 macbook air"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/X0aDvCu.jpg" /></span>
+			<span aria-label="pxe bootloader screen of cubieboard. it was having small pxe loader on the chip, where it boots debian from our office server over network."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/rbUp9mJ.jpg" /></span>
+			<span aria-label="we were tweaking and tunning our airsoft weapons for the match on the weekend. you can see erkin doesn't give a shit about childish behaviour :)"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/DG3yPd2.jpg" /></span>
+			<img src="//i.imgur.com/5l4OSjt.jpg" />
+			<span aria-label="we printed holder to make control panel to the rep-rap diy 3d printer. it had brand new raspberry pi 2 and touch screen which also included slic3r inside to do all printing in one place."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/1uz8qSz.jpg" />
+				<img src="//i.imgur.com/OdmvJGS.jpg" />
+			</span>
+			<span aria-label="printing tablet holder for our digital signage project at 3durak"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/HX6xaVa.jpg" /></span>
+			<span aria-label="my zenith notebook fro 1994 runs windows 3.1 and running some games from floppys... to see where we come today!"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/68A4Rob.jpg" /></span>
+			<span aria-label="printing tablet holder for digital signage project at 3durak. you can see oo-kuma filament box at the background"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/XV0HQaG.jpg" /></span>
+			<span aria-label="running trello at our office's samsung 10.1 tablet, we were lazy to check tasks so bought some holder arm to hold tablet in the air so everyone can check their task while passing by... Entrance of meeting room"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/Bhy8oc7.jpg" /></span>
+			<span aria-label="we printed those and the designer put .com instead of .net without checking. then aydin approved and sent for printing. then we had to paste '.net' sticker 1000 times to fix url on the cover!"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/yi00Boe.jpg" /></span>
+			<span aria-label="office follow up trello board hang next to meeting room door."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/Mv2SUQl.jpg" /></span>
+			<span aria-label="our dissection camera with 18 power leds to 2k imaging and recording dissection process at medical school in bau. we were live streaming those to help junior students to inspect process without taking course. (course was only offered to seniors)"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/gMd2Z8O.jpg" /></span>
+			<span aria-label="our first version of digital signage screen, we put it in front of glass via duct-tape, sticked like toddlers :) showing twitter feed via api and using mysql to connect and show sentence per minute"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/Wb4nrwU.jpg" /></span>
+			<span aria-label="the car university get into national efficiency race for hydrohen powered vehicles 4 times. we were tuning car and reconstruction electrical system with erkin sahin. I was in telemetry team."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/ORk7YMm.jpg" /></span>
+			<span aria-label="our first expansion and development board for esp8266-07 version which failed afterwards"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/lAN93B2.jpg" /></span>
+			<span aria-label="our camera and esp8266 wifi module with expansion board side by side. we used linux installed cctv for the camera."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/sVESyzx.jpg" /></span>
+			<span aria-label="my notification system using sendmail and cron to send scheduled mails to notify members to do social media stuff while we were not having dedicated person to do."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/EiDvnxT.jpg" /></span>
+			<span aria-label="printing camera casing with zortrax m200 where kamran elchuzade designed exterior parts"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/Ujm6eip.jpg" /></span>
+			<span aria-label="doing classical update stuff on my raspberry pi model b and investigating interface addresses on the server where i just connected tp-link tl-wn722 wifi adapter."
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/5aCJFN5.jpg" /></span>
+			<span aria-label="digital signage system we sold (but not get paid!) to plato myo in istanbul. it shows camera and rfid system to match student picture. (matching was not good because of 1mp camera and lack of lightning)"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/d8R15fL.jpg" /></span>
+			<span aria-label="kaan alper explaining something to me, levent and erkin"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/arGAX6a.jpg" /></span>
+			<span aria-label="the ad and cover for cadaver dissection camera which i designed in gimp"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//i.imgur.com/2Ub8mdu.jpg" /></span>
+			<span aria-label="erkin's quadcopter. even if he said take precautions he flies it indoors :)"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//cdn.discordapp.com/attachments/220182253651623936/245635158512762882/VID-20131115-00000.MP4_snapshot_00.03_2014.03.26_23.06.01.jpg" />
+			</span>
+			<span aria-label="me, berke kocar and kamran elchuzade (left to right) in late 2015 where we bought zortrax m200 3d printer and estabilished abbox 3d modelling and printing for university students. (erkin sahin took the photo)"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//cdn.discordapp.com/attachments/220182253651623936/245635379992985600/DSC_1273.JPG" />
+			</span>
+			<span aria-label="doint some networking setup while connected to serial uart port of raspberry pi model b and having some coffee :) it was the time where doing 'ls -l' considered hacking (bau being bau)"
+				class="hint--bottom hint--rounded hint--bounce" >
+				<img src="//cdn.discordapp.com/attachments/220182253651623936/245635446216982538/DSC_1275.JPG" />
+			</span>
+		</section>
 		<hr />
 		<div class=links >
 			contact me:
 			twitter: <a href='//twitter.com/pvtmert'>@pvtmert</a>
 			or
 			github: <a href='//github.com/pvtmert'>/pvtmert</a>
-			or mail me: 
 		</div>
 		<hr />
 		<br />
@@ -367,6 +334,8 @@ var timer = false;
 			} else {
 				this.removeAttribute("fs");
 			}
+			this.parentNode.classList.toggle("hint--hidden")
+			document.body.classList.toggle("blur")
 			return;
 		});
 	}
@@ -385,7 +354,7 @@ window.addEventListener("keyup", function(e) {
 		for(var i=0;i<imgs.length;i++) {
 			if(imgs[i].getAttribute("fs") !== null) {
 				imgs[i].removeAttribute("fs");
-				imgs[(i-1+imgs.length)%imgs.length].setAttribute("fs", true);
+				imgs[(i-1+imgs.length)%imgs.length].setAttribute("fs", null);
 				break;
 			}
 			continue;
@@ -396,7 +365,7 @@ window.addEventListener("keyup", function(e) {
 		for(var i=0;i<imgs.length;i++) {
 			if(imgs[i].getAttribute("fs") !== null) {
 				imgs[i].removeAttribute("fs");
-				imgs[(i+1)%imgs.length].setAttribute("fs", true);
+				imgs[(i+1)%imgs.length].setAttribute("fs", null);
 				break;
 			}
 			continue;
@@ -407,5 +376,12 @@ window.addEventListener("keyup", function(e) {
 	return;
 });
 		</script>
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg" style="display:none;">
+			<defs>
+				<filter id="blur-filter">
+					<feGaussianBlur stdDeviation="8"></feGaussianBlur>
+				</filter>
+			</defs>
+		</svg>
 	</body>
 </html>
