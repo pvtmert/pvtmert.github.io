@@ -141,8 +141,8 @@
 				box-shadow:0 0 0 99em rgba(0, 0, 0, 0.9);
 			}
 		}
-		[class*=hint--hidden]:after,
-		[class*=hint--hidden]:before {
+		[class*=hint--]:after,
+		[class*=hint--]:before {
 			display: none;
 		}
 		</style>
@@ -334,7 +334,6 @@ var timer = false;
 			} else {
 				this.removeAttribute("fs");
 			}
-			this.parentNode.classList.toggle("hint--hidden")
 			document.body.classList.toggle("blur")
 			return;
 		});
