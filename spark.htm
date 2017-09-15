@@ -107,6 +107,7 @@
 			max-height:100vh;
 			min-height:0;
 			border-radius:0;
+			pointer-events: auto;
 			box-shadow:0 0 0 99em rgba(0, 0, 0, 0.9);
 		}
 		_img:hover { z-index:5; transform:scale(1.6); }
@@ -124,6 +125,9 @@
 			font-size: 14px;
 			color: #222;
 		}
+		.blur {
+			pointer-events: none;
+		}
 		@supports (-webkit-backdrop-filter: none) {
 			[class*=hint--]:after {
 				backdrop-filter: blur(8px);
@@ -132,11 +136,9 @@
 			}
 			.blur {
 				filter: url(#blur-filter);
-				pointer-events: none;
 			}
 			img[fs] {
 				box-shadow:0 0 0 99em rgba(0, 0, 0, 0.9);
-				pointer-events: auto;
 			}
 		}
 		[class*=hint--hidden]:after,
